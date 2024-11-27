@@ -1,0 +1,156 @@
+
+  
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin Lỗi và Cảm Ơn</title>
+    <style>
+        body {
+            font-family: 'Normal', sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            padding: 200px;
+            color: #555;
+        }
+        h1, p {
+            font-family: 'Georgia', serif;
+            color: #d85e8d;
+            font-size: 30px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 20px;
+            font-family: 'Arial', sans-serif;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: #ff80bf;
+            color: white;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff4da6;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .page {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+        /* Nút "Không" sẽ di chuyển khi bấm vào */
+        @keyframes moveRandomly {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(100px, -50px); }
+            50% { transform: translate(-150px, 100px); }
+            75% { transform: translate(200px, 120px); }
+            100% { transform: translate(-100px, -100px); }
+        }
+        .moving {
+            animation: moveRandomly 1s forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Trang 1 -->
+    <div id="page1" class="page visible">
+        <h1>Em có yêu anh hơm nèee tình iuuu😜💕🤞?</h1>
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDkzZjN0MXZsbTh4ZDBycm82eTQwMmp2czdrdW4yc3EzdXRzbXh1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/YVhpNLN6aBCpczlLGs/giphy.gif" alt="Ảnh động yêu thương" />
+        <div class="buttons">
+            <button id="yes1" onclick="nextPage(1, 'yes')">Dạaa iu ạ</button>
+            <button id="no1" onclick="moveNo('no1')">Không</button>
+        </div>
+    </div>
+
+    <!-- Trang 2 -->
+    <div id="page2" class="page">
+        <h1>Anh thật sự xin lỗi vì đã làm em không vui và mệt mỏi từ qua và hôm nay 👉👈😭</h1>
+        <img src="https://media.giphy.com/media/SVkhYVCi8fKPKvypi6/giphy.gif" alt="Ảnh động yêu thương" />
+        <a href="#" onclick="nextPage(2, 'yes')"><button>Tiếp tục</button></a>
+    </div>
+
+    <!-- Trang 3 -->
+    <div id="page3" class="page">
+        <h1>Anh sai ròi và anh thực sự siu có lỗi với em công chúa ạ. Anh xin lỗi công chúa của anh!!!!! 🤧🤧</h1>
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmg1YmU5NXpkNmJxOG56ZHowZnl6Yms1MjRkMmdhd3JoaGYzZHdxYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ln20wyFXfZC6c/giphy.gif" alt="Ảnh động yêu thương" />
+        <a href="#" onclick="nextPage(3, 'yes')"><button>Tiếp tục</button></a>
+    </div>
+
+    <!-- Trang 4 -->
+    <div id="page4" class="page">
+        <h1>Em quan trọng với anh nhìu siu nhìu luôn em là mọi thứ của anh không em mọi thứ vô vị cực kì huhhuhu 🥺.</h1>
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTRkanI5anVwZGppdzQxMjFjNDRseHdiMzlkc3B4dml5YTY1OHNrayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/27rspbAAESlzzFtN2e/giphy.gif" alt="Ảnh động yêu thương" />
+        <a href="#" onclick="nextPage(4, 'yes')"><button>Tiếp tục</button></a>
+    </div>
+
+    <!-- Trang 5 -->
+    <div id="page5" class="page">
+        <h1>Em tha lỗi cho nhaaaa em iuuuu 🤞🤞?</h1>
+        <img src="https://media.giphy.com/media/vFycqTbKIxXiKyZvEs/giphy.gif?cid=ecf05e47vv3gzzzg5ptruhdke2j1929z86wup6253wxcn1wr&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Ảnh động yêu thương" />
+        <div class="buttons">
+            <button id="yes5" onclick="nextPage(5, 'yes')">Dạaaa em tha cho anh ạa</button>
+            <button id="no5" onclick="moveNo('no5')">Không</button>
+        </div>
+    </div>
+
+    <!-- Trang 6 -->
+    <div id="page6" class="page">
+        <h1>Anh cảm ơn em, anh yêu em nhìuuuu 🥰. Chụt chụt chụt😘😘😘!</h1>
+        <img src="https://media.giphy.com/media/MBaRIkFJiJ1yF5ZUy8/giphy.gif?cid=790b7611zo58594tn0xbsqclgi6esr3ffqu8epajk9j4slvp&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Ảnh động yêu thương" />
+        <a href="#" onclick="nextPage(6, 'yes')"><button>Bắt đầu lại</button></a>
+    </div>
+
+    <script>
+        function nextPage(page, answer) {
+            // Ẩn tất cả các trang
+            for (let i = 1; i <= 6; i++) {
+                document.getElementById('page' + i).classList.remove('visible');
+                document.getElementById('page' + i).classList.add('page');
+            }
+
+            // Trang 1: xử lý câu trả lời "Có" và "Không"
+            if (page === 1) {
+                if (answer === 'no') {
+                    // Không chuyển trang nếu bấm vào "Không"
+                    return; // Để lại nút "Không" đang di chuyển
+                } else {
+                    document.getElementById('page2').classList.add('visible');
+                }
+            } else if (page === 2 || page === 3 || page === 4) {
+                document.getElementById('page' + (page + 1)).classList.add('visible');
+            } else if (page === 5) {
+                if (answer === 'no') {
+                    return; // Không chuyển trang nếu bấm vào "Không"
+                } else {
+                    document.getElementById('page6').classList.add('visible');
+                }
+            } else if (page === 6) {
+                document.getElementById('page1').classList.add('visible');
+            }
+        }
+
+        // Hàm để "Không" di chuyển khi bấm vào nó
+        function moveNo(buttonId) {
+            const noButton = document.getElementById(buttonId);
+            if (!noButton.classList.contains('moving')) {
+                noButton.classList.add('moving');
+                setTimeout(function() {
+                    // Sau khi di chuyển, quay lại vị trí ban đầu
+                    noButton.classList.remove('moving');
+                }, 1000); // Thời gian di chuyển trong 1 giây
+            }
+        }
+    </script>
+
+</body>
+</html>
